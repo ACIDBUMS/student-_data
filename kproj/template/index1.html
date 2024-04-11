@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism website-design</title>
+    <link rel="stylesheet" href="{% static 'css\style1.css' %}">
+</head>
+<body>
+
+    <section class="header">
+       <nav>
+        <a href=""><img src="{% static 'images\pic (2).jpg' %}"></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li ><a  href="">HOME</a></li>
+            <li ><a  href="">About</a></li>
+            <li ><a  href="">Sites</a></li>
+            <li ><a  href="">Package</a></li>
+            <li ><a  href="">Contact</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-times" onclick="showMenu()"></i>
+      </nav>
+<div class="text-box">
+  <h1>Indian Tourism</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+  <a href="" class="hero-btn">Visist Us To Know More</a>
+</div>
+
+  </section>
+
+<!---------------------------------Sites--------------------------------------------------->
+<section class="sites">
+  <h1>Destination Sites</h1>
+  <p>Here its the place for destinations</p>
+<div class="row">
+  <div class="sites-col">
+    <h3>State-Wise Tourism </h3>
+    <p>State- wise site of India </p>
+  </div>
+
+  <div class="sites-col">
+    <h3>National Parks </h3>
+    <p>Different state wise site of India </p>
+  </div>
+
+  <div class="sites-col">
+    <h3>Bird/wild Santuries</h3>
+    <p>Different state wise site of India </p>
+  </div>
+
+</div>
+
+</section>
+
+<!--------------------------k-tour--------------------------------------->
+
+<section class="k-tour">
+<h1>Kerala Tourism</h1>
+<p>Tourism in so called God's own country </p>
+
+
+<div class="row">
+
+  <div class="kera">
+    <img src="{% static 'images\pic1.jpg' %}">
+    <div class="layer">
+      <h3> Alappuzha</h3>
+    </div>  
+  
+  </div>
+
+  <div class="kera">
+    <img src="{% static 'images\pic3.jpg' %}">
+  
+
+    <div class="layer">
+      <h3> Idduki</h3>
+    </div>  
+  
+  </div>
+  <div class="kera">
+    <img src="{% static 'images\pic4.jpg' %}">
+  
+
+  <div class="layer">
+    <h3> Wayanad</h3>
+  </div>  
+  
+  </div>
+
+
+
+</div>
+
+</section>
+
+<!-------------------------Packages--------------------------------------->
+
+<section class="packages">
+  <h1>Our Packages</h1>
+  <p>One of the leading tour packages and events all over India</p>
+
+<div class="row">
+  <div class="packages-col">
+    <img src="{% static 'images\pic1.jpg' %}">
+    <h3>Low Budget Packages</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur </p>
+  </div>
+  <div class="packages-col">
+    <img src="{% static 'images\pic3.jpg' %}">
+    <h3>Medium Budget Packages</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur </p>
+  </div>
+  <div class="packages-col">
+    <img src="{% static 'images\pic4.jpg' %}">
+    <h3>High Budget Packages</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur </p>
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+<!--------JavaScript for Toggle Menu---------->
+
+    <script>
+      var navLinks=document.getElementById("navLinks");
+
+      function showMenu(){
+        navLinks.style.right="0";
+      }
+
+      function hideMenu(){
+        navLinks.style.right="-200px";
+      }  
+
+    </script>
+</body>
+</html>

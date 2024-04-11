@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coffee website</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Literata">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">coffee<span>.</span></a>
+            <ul class="menu-links">
+                <span id="close-menu-btn" class="material-symbols-outlined">close
+                </span>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">testimonials</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+            <span id="menu-btn" class="material-symbols-outlined">menu</span>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="content">
+            <h1>Start Your Day With Fresh Coffee</h1>
+            <p>
+                coffee is a popular and beloved beverage enjoyed by 
+                people around the world. Awaken your senses with a steaming coffee
+            </p>
+            <button>Order Now</button>
+        </div>
+    </section>
+    <section class="Beans">
+        <h1>COFFEE BEANS</h1>
+        <p>We offer different types of coffee beans,Just for our caffiene addicts.</p>
+
+        
+
+        <div class="kaappi">
+            <div class="kapi">
+                <h3>MASALA COFFEE</h3>
+                <p>masala kapi is the drink of the rich people.
+                people only drink masala kapi to be rich.
+                masala kappi is the brand,masala kapi is the name.</p>
+                
+            </div>
+            
+            <div class="kapi">
+                <h3>CAPPUCINO</h3>
+                <p>cappucino is the drink of the rich people.
+                    people only drink cappucino to be rich.
+                    cappucino is the brand,cappucino is the name.</p>
+            </div>
+            
+            <div class="kapi">
+                <h3>KAPPI</h3>
+                <p>cappucino is the drink of the rich people.
+                    people only drink cappucino to be rich.
+                    cappucino is the brand,cappucino is the name.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pic">
+        <div class="cofhead">
+            <h1>OUR PRODUCTS</h1>
+            <p>coffee is a popular and beloved beverage enjoyed by 
+                people around the world. Awaken your senses with a steaming coffee</p>
+        </div>
+   
+       
+        <div class="row">
+            {% for i in chaivala %}
+        
+            <div class="card" style="width: 18rem;">
+                <img src="{{ i.image.url }}" class="card-img-top" height="200px" width="100%">
+                <div class="card-body">
+                  <h5 class="card-title">{{ i.name }}</h5>
+                  <p class="card-text">{{ i.description }}</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            {% endfor %}  
+
+        </div>  
+    </section>
+
+    <section class="about">
+        <h1>ABOUT US</h1>
+            <p>
+                coffee is a popular and beloved beverage enjoyed by 
+                people around the world. Awaken your senses with a steaming coffee
+            </p>
+        
+            
+    </section>
+    
+    
+
+    <script>
+        const header = document.querySelector("header");
+        const menuBtn = document.querySelector("#menu-btn");
+        const closemenuBtn = document.querySelector("#close-menu-btn");
+
+        menuBtn.addEventListener("click", () => {
+            header.classList.toggle("show-mobile-menu");
+        });
+
+        closemenuBtn.addEventListener("click", () => {
+           menuBtn.click();
+        });
+    </script>
+</body>
+</html>

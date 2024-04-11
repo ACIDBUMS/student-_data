@@ -1,0 +1,294 @@
+@import url('');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppin', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-repeat: repeat;
+}
+
+header {
+  
+    background: url('kproj/static/images/pic1.jpg');
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+
+.navbar .logo span {
+    color: #c06b3e;
+
+}
+
+.navbar .menu-links {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #c06b3e;
+}
+
+.hero-section {
+    background: url("static/images/hero-bg.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.hero-section .content {
+    
+    color: #fff;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero-section .content h1 {
+    font-size: 3rem;
+    max-width: 600px;
+}
+
+.hero-section .content p {
+    font-weight: 300;
+    margin-top: 15px;
+    max-width: 600px;
+}
+
+.hero-section .content button {
+    background: #fff;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 38px;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    
+}
+
+.hero-section .content button:hover {
+    color: #fff;
+    background: #c06b3e;
+    transition: 1s;
+    
+}
+
+#menu-btn {
+    color: #fff;
+    cursor: pointer;
+    display: none;
+   
+}
+
+#close-menu-btn {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    
+}
+
+
+
+@media screen and (max-width: 900px) {
+    header {
+        padding: 10px 20px;
+    }
+
+
+    header.show-mobile-menu::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+    }
+
+
+    #close-menu-btn, #menu-btn {
+        display: block;
+    }
+
+
+    .navbar .menu-links {
+      position: fixed;
+      left: -260px;
+      top: 0;
+      flex-direction: column;
+      width: 260px;
+      height: 100vh;
+      background: #fff;
+      padding: 70px 40px 0;
+      transition: left 1s ease;
+    }
+
+    header.show-mobile-menu .navbar .menu-links {
+        left: 0;
+    }
+
+    .navbar a {
+        color: #000;
+    }
+
+    .hero-section .content :is(h1, p) {
+        max-width: 100%;
+    }
+
+    .hero-section .content h1{
+        font-size: 2.3rem;
+        line-height: 60px;
+    }
+
+    .hero-section .content button {
+        padding: 9px 18px;
+    }
+}
+
+/*------------Beans------------*/
+
+.Beans {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+    color: #000;
+}
+
+.kaappi {
+    margin-top: 5%;
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.kapi {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    color: #000;
+    transition: 0.5s;
+    background-color: #f5edda;
+    
+}
+
+.kapi:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0 , 0 , 5 );
+    color: #fff;
+    background-color: #c06b3e;
+    transition: 0.5s;
+    
+}
+
+.cofhead {
+    width: 100%;
+    margin: 5%;
+    text-align: center;
+    padding-top: 0px;
+    padding-right: 15%;
+    color: #000;
+}
+
+.pic {
+    margin-top: 100px;
+   margin: auto;
+    margin-bottom: 150px;
+    width: 90%;
+}
+
+.row {
+    margin-top: 5%;
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    background: #f5edda;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.card:hover {
+    border-radius: 10px;
+    background: #c06b3e;
+    transition: 0.5s;
+}
+   
+   
+
+
+@media (max-width: 500px) {
+    .kaappi {
+        flex-direction: column;
+    }
+
+    .cofhead {
+        flex-direction: column;
+        text-align: center;
+       }   
+
+    .pic {
+        flex-direction: column;
+        margin-left: 50px;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+}
+    
+/*-----------about----------*/
+
+.about {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 0%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #fff;
+    background: #322d2d;
+}
+
+
+
